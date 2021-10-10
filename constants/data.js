@@ -1,117 +1,130 @@
 const userData = {
-  githubUsername: "manuarora700",
-  name: "Manu Arora",
+  githubUsername: "danieljimenez0255",
+  name: "Daniel Jimenez",
   designation: "Full-Stack Developer",
-  avatarUrl: "/avatar.png",
-  email: "manuarorawork@gmail.com",
-  phone: "+91 9587738861",
-  address: "Jaipur, Rajasthan, India.",
+  avatarUrl: "/images/portfolio-img.jpg",
+  email: "djimenez0255@djimenezdev.com",
+  phone: "+1 6615445098",
+  address: "Lancaster, California",
   projects: [
     {
-      title: "Tailwind Master Kit",
-      link: "https://tailwindmasterkit.com",
-      imgUrl: "/tmk.jpg",
+      title: "Airbnb Clone built with NextJS",
+      link: "https://airbnb-clone-with-nextjs.vercel.app/",
+      imgUrl: "/images/airbnb-clone.jpg",
     },
     {
-      title: "PlaceholderTech",
-      link: "https://placeholdertech.in",
-      imgUrl: "/placeholdertech.png",
+      title: "MDS Homes Realtor Website",
+      link: "https://www.marlontherealtor.com/",
+      imgUrl: "/images/mdshomes-website.jpg",
     },
     {
-      title: "Portfolio",
-      link: "https://manuarora.in",
-      imgUrl: "/portfolio.png",
+      title: "Uber Clone",
+      link: "https://expo.io/@djimenez0255/projects/uberClone",
+      imgUrl: "/images/uber-clone.jpg",
     },
     {
-      title: "CovidRescue",
-      link: "https://covidrescue.co.in",
-      imgUrl: "/covidrescue.png",
+      title: "Amazon Clone",
+      link: "https://clone-stripe.web.app/",
+      imgUrl: "/images/amazon-clone.jpg",
     },
     {
-      title: "Algochurn",
-      link: "https://algochurn.com",
-      imgUrl: "/algochurn.png",
+      title: "Netflix Clone",
+      link: "https://netflix-challenge-clone.web.app/",
+      imgUrl: "/images/netflix-clone.jpg",
     },
     {
-      title: "Playground",
-      link: "https://play.placeholdertech.in",
-      imgUrl: "/playground.png",
+      title: "CryptoTracker",
+      link: "https://expo.dev/@djimenez0255/CryptoApp",
+      imgUrl: "/images/cryptoTracker-thumbnail.jpg",
     },
     {
-      title: "Feedmeback",
-      link: "https://feedmeback.vercel.app",
-      imgUrl: "/feedmeback.png",
+      title: "Signal Clone",
+      link: "https://expo.dev/@djimenez0255/signal-clone",
+      imgUrl: "/images/Signal-Clone-Thumbnail.jpg",
     },
     {
-      title: "Devmedium",
-      link: "https://devmedium.vercel.app",
-      imgUrl: "/devmedium.png",
+      title: "WP Portfolio",
+      link: "https://portfolio.freelancerpro.org/",
+      imgUrl: "/images/wp-portfolio-thumbnail.jpg",
     },
   ],
   about: {
-    title:
-      "I'm a software developer that loves building products and web applications that impact millions of lives",
-    description: [
-      `I've been developing full-stack application since I was 10 years old. I didn't know what full-stack meant at that time because the term was not coined back then. I'm so out of content right now that I'm literally crying writing this text since lorem text is so 2012 now.`,
-      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap, you were cool.`,
-      `But now, I'm a legend. I've been coding in React, Angular, Vue, Svelte, Node.js, Express, Fastify, MongoDB, MySQL, Bootstrap, Tailwind, C, C++, C#, Rust, Haskell, Perl, PHP, Assembly, Logo and YouDontKnowShit programming language etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
+    title: [
+      "I'm a ",
+      " California Based Full Stack developer & tutor",
+      " that loves building web applications and mobile apps that bring great value to others.",
+      " Always love to take on a challenge!",
     ],
-    currentProject: "Tailwind Master Kit",
-    currentProjectUrl: "https://tailwindmasterkit.com",
+    description: [
+      `Technology has always been a part of my genes. `,
+      `At the age of 15 is when web development in particular clicked with me. I loved being able to type up some html, css & js  to put together amazing websites. But it wasn't until Rafeh Qazi, the founded of Clever Programmer, introduced me into Full Stack Development. From there I was hooked!`,
+      `I have been blessed to be one of his success coaches for his program Profit with JavaScript being able to learn from amazing developers and being able to teach that to the amazing students. And I have been able to do so much more to continue my journey as a Full Stack Developer.`,
+      `I went from just knowing the bare bone basics to building high level applications. I'm excited to bring my knowledge and experience where I go next on my journey:)`,
+    ],
   },
   experience: [
     {
-      title: "Software Developer",
-      company: "mroads",
+      title: "Freelancer",
+      company: "DJimenezDev",
       year: "2021",
-      companyLink: "https://mroads.com",
-      desc: "Contributed to our flagship product - Panna - which is an AI powered candidate interviewing product.",
+      companyLink: "https://djimenezdev.com",
+      desc: "Also do freelancing work helping my clients build the dream site for their brand using the skills I have developed",
     },
+
     {
-      title: "Founder and Developer",
-      company: "TailwindMasterKit",
-      year: "2021",
-      companyLink: "https://tailwindmasterkit.com",
-      desc: "Developed a marketplace for tailwind web components (React, HTML and Angular) and templates.",
-    },
-    {
-      title: "Founder and Developer",
-      company: "Algochurn",
-      year: "2021",
-      companyLink: "https://algochurn.com",
-      desc: "Your last moment revision friend right before a Tech coding interview. Practice problems and get hired at top Product based companies.",
-    },
-    {
-      title: "Internship",
-      company: "Intel Corporation",
-      year: "2019",
+      title: "Full Stack Development Tutor",
+      company: "Wyzant Inc",
+      year: "2020",
       companyLink: "https://intel.com",
-      desc: "Developed pothole detection system with OpenCV and computer vision, detects potholes on roads and informs the driver.",
+      desc: "I get into one on one calls with students to discuss their development roadblocks and help them find the solutions to those roadblocks",
     },
     {
-      title: "Graduation",
-      company: "UPES, Dehradun.",
+      title: "Success Coach",
+      company: "Clever Programmer",
+      year: "2020",
+      companyLink: "https://www.cleverprogrammer.com/",
+      desc: "Worked with many amazing developers teaching the fundamentals of full stack development to over 2000 students in creative ways",
+    },
+    {
+      title: "I.T. Intern",
+      company: "The Palmdale Aerospace Academy",
       year: "2019",
-      companyLink: "https://upes.co.in",
-      desc: "Major in Computer Science and Engineering with a CGPA of 7.0. Nobody asks this but it's okay.",
-    },
-    {
-      title: "High School",
-      company: "Delhi Public School, Jaipur.",
-      year: "2015",
-      companyLink: "https://upes.co.in",
-      desc: "Subjects being PCM - I barely survived with 93.6% marks aggregate. Flex fridays, fellas.",
+      companyLink: "https://www.tpaa.org/#",
+      desc: "Although not web development. I learned a lot of valuable information in the tech field and was a big jump start in my career as a developer",
     },
   ],
   resumeUrl:
     "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
   socialLinks: {
-    instagram: "https://instagram.com/maninthere",
-    twitter: "https://twitter.com/mannupaaji",
-    linkedin: "https://linkedin.com/in/manuarora28",
-    github: "https://github.com/manuarora700",
-    facebook: "https://facebook.com/",
+    instagram: "https://instagram.com/djimenez0255",
+    twitter: "https://twitter.com/djimenez_0255",
+    linkedin: "https://www.linkedin.com/in/daniel-jimenez-479b961a9/",
+    github: "https://github.com/danieljimenez0255",
+    facebook: "https://www.facebook.com/djimenez0255",
+  },
+  techStack: {
+    javaScript:
+      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
+    html: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png",
+    css: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png",
+    git: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png",
+    react:
+      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
+    firebase:
+      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png",
+    mongoDB:
+      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png",
+    nextJS: "/images/nextjs_logo.png",
+    story: "/images/story-logo.png",
   },
 };
 
 export default userData;
+
+export const svgPaths = {
+  arrowDown:
+    "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z",
+};
+
+export const imgBlur =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAaCAIAAAB6opi9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEySURBVFhH1VdLFsIgDAzeyrN7MjfFSaC0lJLqwMLOw8cnH4ZMFjU8X2+JEmOURYCw2DpKGiGGtMW5nQRZMK0LLC0K25DP84gp2+oAK9JYlG7hoKZk1UW+HbPmifIwrz9AyHNCnxYe0Ud6quvCoHDr06rpn0JdztzG6fIi9miTnOowkpZTSpgcaxcWU7iRtBCfxuGVs0C2/HzU1/Etn8ViBOuiJONbfjLq55EiTq3RhnInKSLi0/DZf4k2x9+IWFPjaaGaWtCmqLmKY7hdy7twG+9ntNlIWptM44IdAI7hfi3vlmEreyOAvZaEBuJe7+vUze1LRwtbAueLSHPaY5jWFBYrVCFrgvnVohtrD5JWedYpC5qZlh4/r+VddTQW/+csRQU3StGjbOfFOF/Ea2aXEPkAw5No5T4ThIoAAAAASUVORK5CYII=";
