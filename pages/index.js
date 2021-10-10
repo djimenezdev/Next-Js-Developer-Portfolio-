@@ -1,17 +1,18 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import ContainerBlock from "../components/ContainerBlock";
-import FavouriteProjects from "../components/FavouriteProjects";
-import LatestCode from "../components/LatestCode";
-import Hero from "../components/Hero";
+import ContainerBlock from "@components/ContainerBlock";
+import FavouriteProjects from "@components/FavProjects/FavouriteProjects";
+import LatestCode from "@components/LatestCode/LatestCode";
+import Hero from "@components/Hero/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
 
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title="Daniel Jimenez - Developer, Writer, Creator"
+      description="Full Stack Web developer who developing websites with passion"
+      type="website"
+      image="/images/portfolio-screenshot.png"
+      date={new Date()}
     >
       <Hero />
       <FavouriteProjects />
@@ -21,11 +22,9 @@ export default function Home({ repositories }) {
 }
 
 export const getServerSideProps = async () => {
-  console.log(process.env.GITHUB_AUTH_TOKEN);
   let token = process.env.GITHUB_AUTH_TOKEN;
 
   const repositories = await getLatestRepos(userData, token);
-  // console.log("REPOSITORIES", repositories);
 
   return {
     props: {
