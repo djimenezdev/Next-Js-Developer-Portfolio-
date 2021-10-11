@@ -1,76 +1,72 @@
-## Portfolio Website For Developers 💯
+# My NextJs Portfolio
 
-**UPDATE:**
+This is a very special portfolio that I am super excited to share with you!
 
+- Utilizes Next Js built in page routing, APIs, SSR, SSG & more
 
-1. Wrote a detailed blog on [freeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-nextjs-tailwindcss/), describing and explaining how I built this application from the ground up.
+- Also utilizes the utility based css framework Tailwindcss
 
-2. Included the `constants` folder, where you can directly add your details and it'll get reflected throughout the application. No more customizations for the template required, just add your data and it'll reflect immediately.
+- Also implemented nodemailer for the contact form and using SendGrid as my SMTP
 
-Portfolio for developers is a simple and minimalistic website to showcase your skills and projects as a developer. The design is inspired by [Kevin Clark](https://kevinclark.ca). The website is completely Open Source, you can use it for whatever purpose you want.
+        Big Thanks goes to Manu Arora for this awesome template. He is an amazing developer who has developed some amazing projects. I highly recommend checking out!
 
-![HomeGif](https://github.com/manuarora700/simple-developer-portfolio-website/blob/main/demo-images/websitegif.gif)
+        His GitHub: https://github.com/manuarora700
 
-# Features
+# Here is a demo and a link to my version of this awesome template
 
-- Responsive layout, works well on both Mobile and Desktop
-- Dark mode support. Click buttons to toggle dark mode and light mode.
-- Clear React components and tailwind styling.
-- Exact sections that a developer needs to showcase their skills.
-- Clear call to actions.
+# How can you can use this template yourself
 
-# Pages
+1. Firstly you need to download the zip that contains the template
 
-I've kept the pages as simple as possible. Only the required sections are included with minimal content.
+   - Click the link below it will take you to the template repository.
 
-## Landing
+     - [Click Me to go to Simple Developer Portfolio Repository](https://github.com/manuarora700/simple-developer-portfolio-website)
 
-![Hompage](https://github.com/manuarora700/simple-developer-portfolio-website/blob/main/demo-images/home.png)
+   - Once you are on the page click the green code button which is circled blue in the image below. It will show a list of options. Click the one that says download zip which is circled red in the picture below:
 
-## About
+![Portfolio Repo Screenshot](./public/images/readme-screenshot-one.jpg)
 
-![Hompage](https://github.com/manuarora700/simple-developer-portfolio-website/blob/main/demo-images/about.png)
+2. Make sure to have Node JS and VScode installed before unzipping.
 
-## Projects
+   - It is important to have NodeJs installed so you can be able to run the project
 
-![Hompage](https://github.com/manuarora700/simple-developer-portfolio-website/blob/main/demo-images/projects.png)
+     - [Click me to download NodeJs](https://nodejs.org/en/)
 
-## Experience
+   - I brought up VSCode as it is one of the best code editors and since its free takes it to the next level. You can use any editor as long as you know how to work it
+     - [Click me to download VSCode](https://code.visualstudio.com/)
 
-![Hompage](https://github.com/manuarora700/simple-developer-portfolio-website/blob/main/demo-images/experience.png)
+3. Unzip and open in editor
+   - Now that you have node js installed and your editor ready, go to your downloads and unzip. Then open it in your editor as seen below:
 
-## Contact
+![Opening Project in VSCode](./public/images/readme-screenshot-two.png)
 
-![Hompage](https://github.com/manuarora700/simple-developer-portfolio-website/blob/main/demo-images/contact.png)
+- Once you open the editor it is going to ask if you trust the author of the content. Click Yes and your editor should look similar to below:
 
-# Tech Stack
+![Opening Project in VSCode Final](./public/images/readme-screenshot-three.png)
 
-The website is built in my favourite Tech Stack and deployed on [Vercel](https://vercel.com)
+4. Delete yarn.lock file as we will be using npm to manage the project not yarn
 
-- [Next.js](https://nextjs.org) for building React Components.
-- [tailwindcss](https://tailwindcss.com) for styling.
-- [React Rough Notation](https://roughnotation.com) for Hero section highlighting.
-- [Vercel](https://vercel.com) for deployments and CI/CD.
+![Deleting yarn.lock](./public/images/readme-screenshot-four.png)
 
-# Usage
+5. Open the terminal and install the dependencies
 
-- Clone the repository using `git clone https://github.com/manuarora700/simple-developer-portfolio-website.git`
-- Install all the modules by using `npm i` or `npm install` or `yarn`
-- Run the local development server by using `npm run dev` or `yarn dev`
-- Make the required edits and deploy to YOUR GitHub repo for CI/CD.
+   - On windows click <code>ctrl + `</code> to open the terminal
+   - On macOS click <code>command + `</code> to open the terminal
 
-# Deployment
+   Once you do that the terminal will open in the bottom
 
-Deployment can be done in 3 easy steps.
+   In the terminal type <code>npm install</code> and press enter
 
-- Login to [Vercel](https://vercel.com) or signup for an account if you don't have one.
-- Create a `New Project` and select YOUR GitHub repository of the portfolio project.
-- Wait for Vercel to deploy your project to production.
+   What this is doing is its downloading the packages that were used to set up the template. It may take a minute for all the packages to be installed
 
-# License
+   The steps described are shown below
 
-This template is completely open source and free to use. Use it for client projects or your own portfolio project. Give me credits at the footer (If you wish, it'll help me a lot :)).
+![Installing Dependencies](./public/images/readme-screenshot-five.gif)
 
-# Support
+6. Run the project and begin making it your own!!
 
-<a href="https://www.buymeacoffee.com/manuarora" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+   - In the same terminal, once it finished installing, run the command <code>npm run dev</code>
+   - Then open this link in your web browser: http://localhost:3000
+   - npm run dev starts the development server so you can start working on it in your code editor and see what those changes look like via the link you typed in the browser!
+
+# Soon I will be adding a more in depth tutorial of how to fully customize the template. Stay tuned :)
