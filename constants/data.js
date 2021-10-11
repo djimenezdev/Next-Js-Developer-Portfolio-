@@ -75,7 +75,7 @@ const userData = {
       title: "Full Stack Development Tutor",
       company: "Wyzant Inc",
       year: "2020",
-      companyLink: "https://intel.com",
+      companyLink: "https://www.wyzant.com/",
       desc: "I get into one on one calls with students to discuss their development roadblocks and help them find the solutions to those roadblocks",
     },
     {
@@ -94,7 +94,7 @@ const userData = {
     },
   ],
   resumeUrl:
-    "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
+    "https://drive.google.com/file/d/1vEp4CPErkYB5e10RG-6FHHZDLXlkPXEZ/view?usp=sharing",
   socialLinks: {
     instagram: "https://instagram.com/djimenez0255",
     twitter: "https://twitter.com/djimenez_0255",
