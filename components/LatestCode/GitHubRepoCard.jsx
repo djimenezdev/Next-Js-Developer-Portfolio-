@@ -4,7 +4,7 @@ import Image from "next/image";
 export const GithubRepoCard = ({ latestRepo }) => {
   return (
     <section className="github-repo dark:bg-[#111827] bg-white shadow-shadow-white  rounded-md p-2 max-h-48">
-      <h1 className="font-semibold md:text-lg lg:text-base xl:text-lg text-white  mb-3 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md p-[0.5] pl-2">
+      <h1 className="font-semibold text-sm md:text-lg lg:text-base xl:text-lg text-white  mb-3 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md p-[0.5] pl-2">
         {latestRepo.name.charAt(0).toUpperCase() + latestRepo.name.substring(1)}
       </h1>
       <div className="flex space-x-4">
