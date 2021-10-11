@@ -26,7 +26,7 @@ const SidebarSection = ({ title, desc, user }) => {
             <a
               className="group border-b-2 border-gray-800 hover:border-white dark:border-gray-300 font-bold dark:text-gray-300 whitespace-nowrap hover:bg-white hover:rounded-md px-1 transition-all  duration-200"
               target="_blank"
-              href="#"
+              href={user?.resumeUrl}
             >
               <span className="group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] ">
                 CV
