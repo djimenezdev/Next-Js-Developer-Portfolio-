@@ -13,7 +13,7 @@ const userData = {
       imgUrl: "/images/airbnb-clone.jpg",
     },
     {
-      title: "MDS Homes Realtor Website",
+      title: "MDS Homes  Website",
       link: "https://www.marlontherealtor.com/",
       imgUrl: "/images/mdshomes-website.jpg",
     },
