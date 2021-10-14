@@ -14,7 +14,7 @@ export default function Hero() {
     <div className="flex flex-row md:justify-center lg:justify-between xl:justify-center items-start overflow-hidden">
       {/* Text container */}
 
-      <div className="w-full md:w-1/2 text-center md:text-left lg:py-20 lg:pl-4 lg:pr-20 lgTwo:py-20  xl:pl-20 xl:py-20 xl:pr-24">
+      <div className="w-full md:w-[94vw] lg:w-1/2 text-center md:text-left lg:py-20 lg:pl-4 lg:pr-20 lgTwo:py-20  xl:pl-20 xl:py-20 xl:pr-24">
         <RoughNotationGroup show={true}>
           {highlightSections.map(({ color, text }, i) => (
             <HighlightText color={color} text={text} key={color + "-" + i} />
