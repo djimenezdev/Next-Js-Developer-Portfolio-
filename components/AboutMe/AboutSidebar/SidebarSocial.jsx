@@ -47,7 +47,7 @@ const SidebarSocial = ({ title, link, pathInfo }) => {
             </div>
           )}
           <div className="relative overflow-hidden">
-            <span className="block absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></span>
+            <span className=" absolute h-0.5 w-full bg-gray-400 bottom-0 transform scale-x-0 group-hover:scale-x-100 transition duration-300"></span>
             {title === "instagram" ? (
               <p className="bg-clip-text dark:bg-gray-900 bg-[#F1F1F1] text-transparent bg-instagram-gradient">
                 {title?.charAt(0)?.toUpperCase() + title?.substring(1)}
