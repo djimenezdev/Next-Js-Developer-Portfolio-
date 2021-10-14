@@ -16,9 +16,7 @@ This is a very special portfolio that I am super excited to share with you!
 
 ![My Portfolio Clone](./public/images/portfolio-demo.gif)
 
-<ul>
-   <li><a><h2>Link To Live Site</h2></a></li>
-</ul>
+<a href="https://www.djimenezdev.com" style="display:block;background:#000;width:100%;padding-left:5px"><h2 >Click me to see the live site </h2></a>
 
 # How can you can use this template yourself
 
