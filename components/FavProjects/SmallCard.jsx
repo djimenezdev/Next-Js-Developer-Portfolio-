@@ -7,7 +7,7 @@ const SmallCard = () => {
       className="w-full block lg:col-span-1 col-span-3  object-cover"
     >
       <div className="relative overflow-hidden shadow-2xl rounded-md">
-        <div className="image-container max-h-44">
+        <div className="image-container max-h-[405px]">
           <Image
             src="/images/uber-clone.jpg"
             alt="portfolio"
