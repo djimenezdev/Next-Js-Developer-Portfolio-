@@ -5,17 +5,17 @@ export const ProjectCard = ({ title, link, imgUrl, number }) => {
   return (
     <a href={link} className="w-full block shadow-2xl">
       <div className="relative overflow-hidden">
-        <div className="h-72 w-full object-cover">
+        <div className="w-full h-48 sm:h-55 lg:h-60 xl:h-72 object-cover">
           <Image
             src={imgUrl}
             alt="portfolio"
-            className="transform hover:scale-125 transition duration-2000 ease-out object-cover"
+            className="transform hover:scale-125 transition duration-2000 ease-out object-cover rounded-md"
             layout="fill"
             placeholder="blur"
             blurDataURL={imgBlur}
           />
         </div>
-        <h1 className="absolute top-10 left-10 text-white font-bold text-base sm:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2">
+        <h1 className="absolute top-10 left-10 text-white font-bold text-sm lg:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2">
           {title}
         </h1>
         <h1 className="absolute bottom-10 left-10 text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] font-bold text-xl rounded-md px-2">
