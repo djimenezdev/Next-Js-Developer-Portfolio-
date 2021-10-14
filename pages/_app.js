@@ -5,20 +5,28 @@ import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFacebook,
   faGithub,
-  faInstagram,
+  // faInstagram,
+  // faInstagram,
+  // faInstagramSquare,
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCircle, faSquareFull } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircle,
+  // faSquareFull,
+  // faStop,
+} from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 library.add(
-  faInstagram,
+  // faInstagramSquare,
+  // faInstagram,
   faTwitter,
   faLinkedin,
   faGithub,
   faFacebook,
   faCircle,
-  faSquareFull
+  // faSquareFull,
+  // faStop
 );
 
 function MyApp({ Component, pageProps }) {

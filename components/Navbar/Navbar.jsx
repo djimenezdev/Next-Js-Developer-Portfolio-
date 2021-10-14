@@ -7,6 +7,7 @@ import { Switch } from "@headlessui/react";
 import NavLink from "./NavLink";
 import NavLinkArrow from "./NavLinkArrow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 export default function Navbar() {
   const router = useRouter();
@@ -55,12 +56,14 @@ export default function Navbar() {
               target="_blank"
               className="flex items-center"
             >
-              <FontAwesomeIcon
-                icon={["fab", "instagram"]}
-                size="2x"
-                mask="square-full"
-                className="text-[#FFFFFF] dark:text-[#1F2937]  bg-instagram-gradient cursor-pointer"
-              />
+              <div className="bg-white h-[29px] rounded-md">
+                <Image
+                  src="/images/instagram-icon.png"
+                  width={30}
+                  height={30}
+                  alt="instagram icon"
+                />
+              </div>
             </a>
             <a
               href={userData?.socialLinks?.twitter}

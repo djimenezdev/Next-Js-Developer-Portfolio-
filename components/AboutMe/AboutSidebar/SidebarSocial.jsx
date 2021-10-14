@@ -1,5 +1,5 @@
-import SocialIcon from "@components/SocialIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 const colors = {
   twitter: "text-[#1C99E6]",
@@ -19,12 +19,14 @@ const SidebarSocial = ({ title, link, pathInfo }) => {
         <div className="my-4">&rarr;</div>
         <div className="text-lg text-gray-500 font-mono dark:text-gray-300 flex items-center space-x-2">
           {title === "instagram" ? (
-            <FontAwesomeIcon
-              icon={["fab", title]}
-              size="2x"
-              // mask="square-full"
-              className="text-blue-600" //text-[#F1F1F1] dark:text-gray-900 bg-instagram-gradient overflow-hidden
-            />
+            <div className="bg-white h-[29px] rounded-md">
+              <Image
+                src="/images/instagram-icon.png"
+                width={30}
+                height={30}
+                alt="instagram icon"
+              />
+            </div>
           ) : title === "twitter" ? (
             <FontAwesomeIcon
               icon={["fab", title]}
