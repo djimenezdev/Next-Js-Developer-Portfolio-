@@ -17,6 +17,7 @@ const AboutTech = ({ user }) => {
             className={`mx-4 my-4 ${
               val === "/images/nextjs_logo.png" && "bg-white px-2"
             }`}
+            key={i}
           >
             <Image src={val} width={80} height={80} />
           </div>
