@@ -14,6 +14,12 @@ This is a very special portfolio that I am super excited to share with you!
 
 # Here is a demo and a link to my version of this awesome template
 
+![My Portfolio Clone](./public/images/portfolio-demo.gif)
+
+<ul>
+   <li><a><h2>Link To Live Site</h2></a></li>
+</ul>
+
 # How can you can use this template yourself
 
 1. Firstly you need to download the zip that contains the template
