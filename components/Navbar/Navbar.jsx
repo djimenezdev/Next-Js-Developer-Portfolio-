@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="space-x-8 hidden md:block">
+        <div className="space-x-8 hidden lg:block">
           {/* active link arrow */}
           <NavLinkArrow name="about" path={svgPaths.arrowDown} />
           <NavLinkArrow name="projects" path={svgPaths.arrowDown} />
@@ -112,7 +112,7 @@ export default function Navbar() {
       </div>
 
       {/* regular nav links */}
-      <div className="space-x-4 sm:space-x-8 flex justify-center md:hidden mt-4">
+      <div className="space-x-4 sm:space-x-8 md:space-x-12 lg:space-x-8 flex justify-center lg:hidden mt-4">
         <NavLink page="about" />
         <NavLink page="projects" />
         <NavLink page="experience" />
