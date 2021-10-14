@@ -9,7 +9,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCircle, faSquare } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faSquareFull } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 library.add(
   faInstagram,
@@ -17,7 +17,7 @@ library.add(
   faLinkedin,
   faGithub,
   faFacebook,
-  faSquare,
+  faSquareFull,
   faCircle
 );
 
