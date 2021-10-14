@@ -23,7 +23,7 @@ const SidebarSocial = ({ title, link, pathInfo }) => {
               icon={["fab", title]}
               size="2x"
               mask="square-full"
-              className="text-[#F1F1F1] dark:text-gray-900 bg-instagram-gradient border-0"
+              className="text-[#F1F1F1] dark:text-gray-900 bg-instagram-gradient"
             />
           ) : title === "twitter" ? (
             <FontAwesomeIcon
@@ -49,7 +49,7 @@ const SidebarSocial = ({ title, link, pathInfo }) => {
           <div className="relative overflow-hidden">
             <span className="block absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></span>
             {title === "instagram" ? (
-              <p className="bg-clip-text text-transparent bg-instagram-gradient">
+              <p className="bg-clip-text text-transparent bg-instagram-gradient overflow-hidden">
                 {title?.charAt(0)?.toUpperCase() + title?.substring(1)}
               </p>
             ) : (
