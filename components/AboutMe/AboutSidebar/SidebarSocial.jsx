@@ -1,5 +1,4 @@
 import SocialIcon from "@components/SocialIcon";
-import { faSquareFull } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const colors = {
@@ -23,7 +22,7 @@ const SidebarSocial = ({ title, link, pathInfo }) => {
             <FontAwesomeIcon
               icon={["fab", title]}
               size="2x"
-              mask={faSquareFull}
+              mask="square-full"
               className="text-[#F1F1F1] dark:text-gray-900 bg-instagram-gradient overflow-hidden"
             />
           ) : title === "twitter" ? (
