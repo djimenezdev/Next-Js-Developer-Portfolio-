@@ -23,7 +23,7 @@ const SidebarSocial = ({ title, link, pathInfo }) => {
               icon={["fab", title]}
               size="2x"
               mask="square-full"
-              className="text-[#F1F1F1] dark:text-[#111827]  bg-instagram-gradient"
+              className="text-[#F1F1F1] dark:text-gray-900 bg-instagram-gradient border-0"
             />
           ) : title === "twitter" ? (
             <FontAwesomeIcon
