@@ -9,7 +9,7 @@ export default function Home({ repositories }) {
   return (
     <ContainerBlock
       title="Daniel Jimenez - Developer, Writer, Creator"
-      description="Full Stack Web developer who developing websites with passion"
+      description="Hello my name is Daniel Jimenez! I'm a Full Stack Web dev who developes websites with passion and excited to share it with you!"
       type="website"
       image="/images/portfolio-screenshot.png"
       date={new Date()}
