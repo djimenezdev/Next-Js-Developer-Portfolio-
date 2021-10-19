@@ -17,11 +17,11 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://djimenezdev.com${router.asPath}`}
+          content={`https://www.djimenezdev.com${router.asPath}`}
         />
         <link
           rel="canonical"
-          href={`https://djimenezdev.com${router.asPath}`}
+          href={`https://www.djimenezdev.com${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Daniel Jimenez" />
