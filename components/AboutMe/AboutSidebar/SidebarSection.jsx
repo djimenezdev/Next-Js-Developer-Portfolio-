@@ -29,9 +29,10 @@ const SidebarSection = ({ title, desc, user }) => {
               href={user?.resumeUrl}
             >
               <span className="group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] ">
-                CV
+                Resume
               </span>
             </a>
+
             <span>{desc[1]}</span>
           </>
         )}
