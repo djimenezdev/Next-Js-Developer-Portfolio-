@@ -1,31 +1,52 @@
 import userData from "@constants/data";
 import axios from "axios";
 import { useState } from "react";
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+
+const formValidation = Yup.object().shape({
+  name: Yup.string().required("Make sure to input your name!"),
+  email: Yup.string()
+    .email("Make sure to input valid email")
+    .required("Email is required to ensure I can contact you"),
+  message: Yup.string().required(
+    "Make sure to enter message that is needed to be discussed"
+  ),
+});
+
+const MessageComp = (props) => (
+  <textarea
+    rows="4"
+    type="text"
+    className={`font-light rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6]  border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500 ${
+      props.errors.message &&
+      props.touched.message &&
+      "outline-none ring-2 border-none ring-red-600"
+    }`}
+    {...props}
+  ></textarea>
+);
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
   const [waiting, setWaiting] = useState(false);
   const [confirmMessage, setConfirmMessage] = useState("");
 
-  const sendMessage = async () => {
+  const sendMessage = async (values, { resetForm, setSubmitting }) => {
     setWaiting(true);
     const confirm = await axios.post("/api/send-email", {
-      name: name,
-      email: email,
-      message: message,
+      name: values.name,
+      email: values.email,
+      message: values.message,
     });
     if (confirm?.data?.res === "success") {
       setWaiting(false);
       setConfirmMessage("Successfully Sent!");
+      resetForm();
+      setSubmitting(false);
     } else {
       setWaiting(false);
       setConfirmMessage("Error. Try again");
     }
-    setName("");
-    setEmail("");
-    setMessage("");
     const timeout = setTimeout(() => {
       setConfirmMessage("");
       clearTimeout(timeout);
@@ -171,54 +192,108 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
-            <label htmlFor="name" className="text-sm text-gray-600 mx-4">
-              {" "}
-              Your Name
-            </label>
-            <input
-              type="text"
-              className="font-light rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
-              Email
-            </label>
-            <input
-              type="text"
-              className="font-light rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white  border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label
-              htmlFor="message"
-              className="text-sm text-gray-600 mx-4 mt-4"
-            >
-              Message
-            </label>
-            <textarea
-              rows="4"
-              type="text"
-              className="font-light rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white  border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
-            <button
-              type="button"
-              className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-3 text-gray-50 text-sm font-bold"
-              onClick={sendMessage}
-            >
-              {waiting && confirmMessage?.length === 0
-                ? "Loading..."
-                : !waiting && confirmMessage?.length > 0
-                ? confirmMessage
-                : "Send Message"}
-            </button>
-          </form>
+          <Formik
+            onSubmit={sendMessage}
+            initialValues={{
+              name: "",
+              email: "",
+              message: "",
+            }}
+            validationSchema={formValidation}
+          >
+            {({ values, errors, touched, isSubmitting }) => (
+              <Form className="form rounded-lg bg-white p-4 flex flex-col">
+                <label htmlFor="name" className="text-sm text-gray-600 mx-4">
+                  {" "}
+                  Your Name
+                </label>
+                <Field
+                  name="name"
+                  placeholder="Enter name here"
+                  className={`font-light rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6]  border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500 ${
+                    errors.name &&
+                    touched.name &&
+                    "outline-none ring-2 border-none ring-red-600"
+                  }`}
+                />
+                {errors.name && touched.name && (
+                  <p className="text-red-600 text-xs font-semibold mx-4 mt-1">
+                    {errors.name}
+                  </p>
+                )}
+
+                <label
+                  htmlFor="email"
+                  className="text-sm text-gray-600 mx-4 mt-4"
+                >
+                  Email
+                </label>
+                <Field
+                  name="email"
+                  placeholder="Enter email here"
+                  type="email"
+                  className={`font-light rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6]  border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500 ${
+                    errors.email &&
+                    touched.email &&
+                    "outline-none ring-2 border-none ring-red-600"
+                  }`}
+                />
+                {errors.email && touched.email && (
+                  <p className="text-red-600 text-xs font-semibold mx-4 mt-1">
+                    {errors.email}
+                  </p>
+                )}
+
+                <label
+                  htmlFor="message"
+                  className="text-sm text-gray-600 mx-4 mt-4"
+                >
+                  Message
+                </label>
+                <Field
+                  name="message"
+                  as={MessageComp}
+                  errors={errors}
+                  touched={touched}
+                  placeholder="Enter message here"
+                />
+                {errors.message && touched.message && (
+                  <p className="text-red-600 text-xs font-semibold mx-4 mt-1">
+                    {errors.message}
+                  </p>
+                )}
+                <button
+                  type="submit"
+                  className={`${
+                    errors.name ||
+                    errors.email ||
+                    errors.message ||
+                    values.name.length === 0 ||
+                    values.email.length === 0 ||
+                    values.message.length === 0 ||
+                    isSubmitting
+                      ? "opacity-75 cursor-default"
+                      : "opacity-100 cursor-pointer"
+                  } bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-3 text-gray-50 text-sm font-bold`}
+                  disabled={
+                    errors.name ||
+                    errors.email ||
+                    errors.message ||
+                    values.name.length === 0 ||
+                    values.email.length === 0 ||
+                    values.message.length === 0 ||
+                    isSubmitting
+                  }
+                >
+                  {waiting && confirmMessage?.length === 0
+                    ? "Loading..."
+                    : !waiting && confirmMessage?.length > 0
+                    ? confirmMessage
+                    : "Send Message"}
+                </button>
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </section>
