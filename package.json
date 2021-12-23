@@ -14,14 +14,16 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
+    "@sendgrid/mail": "^7.6.0",
     "axios": "^0.21.1",
     "date-fns": "^2.24.0",
+    "formik": "^2.2.9",
     "next": "^11.1.2",
     "next-themes": "0.0.15",
-    "nodemailer": "^6.6.5",
     "react": "17.x",
     "react-dom": "17.x",
-    "react-rough-notation": "^1.0.1"
+    "react-rough-notation": "^1.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
