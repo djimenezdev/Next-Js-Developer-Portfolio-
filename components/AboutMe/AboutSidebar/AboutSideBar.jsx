@@ -15,7 +15,7 @@ const AboutSideBar = ({ user }) => {
         title="Job Opportunities"
         desc={[
           "I'm looking for a job currently, If you see me as a good fit, check my ",
-          " and I'd love to work for you.",
+          ". I'd love to work for you.",
         ]}
         user={user}
       />
