@@ -3,14 +3,14 @@ import Image from "next/image";
 const SmallCard = () => {
   return (
     <a
-      href="https://expo.io/@djimenez0255/projects/uberClone"
+      href="https://airbnb-clone-with-nextjs.vercel.app/"
       className="w-full block lg:col-span-1 col-span-3  object-cover"
     >
       <div className="relative overflow-hidden shadow-2xl rounded-md">
         <div className="image-container max-h-[405px]">
           <Image
-            src="/images/uber-clone.jpg"
-            alt="portfolio"
+            src="/images/airbnb-clone.jpg"
+            alt="airbnb clone"
             className="portfolio__image transform hover:scale-125 transition duration-2000 ease-out"
             layout="fill"
             quality={65}
@@ -19,7 +19,7 @@ const SmallCard = () => {
           />
         </div>
         <h1 className="absolute top-10 left-2 text-white font-bold text-base sm:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2">
-          Uber Clone
+          Airbnb Clone
         </h1>
         <h1 className="absolute bottom-10 left-2 text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] font-bold text-xl rounded-md px-2">
           03

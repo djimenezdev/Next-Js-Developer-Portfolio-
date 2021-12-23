@@ -3,15 +3,15 @@ import Image from "next/image";
 const MediumCard = () => {
   return (
     <a
-      href="https://www.marlontherealtor.com/"
+      href="https://lorinamarie.com/"
       className="w-full block lg:col-span-2  col-span-3 shadow-2xl "
     >
       <div className="relative overflow-hidden rounded-md">
         {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
         <div className="image-container max-h-[348px]">
           <Image
-            src="/images/mdshomes-website.jpg"
-            alt="portfolio"
+            src="/images/rising-crystals.png"
+            alt="Rising Crystals shop page"
             className="portfolio__image transform hover:scale-125 transition duration-2000 ease-out"
             layout="fill"
             quality={65}
@@ -20,7 +20,7 @@ const MediumCard = () => {
           />
         </div>
         <h1 className="absolute top-10 left-10 text-white font-bold text-base sm:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2">
-          MDS Homes Website
+          Rising Crystals
         </h1>
         <h1 className="absolute bottom-10 left-10 text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] font-bold text-xl rounded-md px-2">
           02
