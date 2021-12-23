@@ -1,21 +1,26 @@
 const userData = {
-  githubUsername: "danieljimenez0255",
+  githubUsername: "djimenezdev",
   name: "Daniel Jimenez",
   designation: "Full-Stack Developer",
   avatarUrl: "/images/portfolio-img.jpg",
-  email: "djimenez0255@djimenezdev.com",
-  phone: "+1 6615445098",
+  email: "daniel@djimenezdev.com",
+  phone: "+1 661-544-5098",
   address: "Lancaster, California",
   projects: [
     {
-      title: "Airbnb Clone built with NextJS",
-      link: "https://airbnb-clone-with-nextjs.vercel.app/",
-      imgUrl: "/images/airbnb-clone.jpg",
-    },
-    {
       title: "MDS Homes  Website",
       link: "https://www.marlontherealtor.com/",
-      imgUrl: "/images/mdshomes-website.jpg",
+      imgUrl: "/images/mds-website.png",
+    },
+    {
+      title: "Rising Crytals",
+      link: "https://www.lorinamarie.com",
+      imgUrl: "/images/rising-crystals.png",
+    },
+    {
+      title: "Airbnb Clone ",
+      link: "https://airbnb-clone-with-nextjs.vercel.app/",
+      imgUrl: "/images/airbnb-clone.jpg",
     },
     {
       title: "Uber Clone",
@@ -67,7 +72,7 @@ const userData = {
       title: "Freelancer",
       company: "DJimenezDev",
       year: "2021",
-      companyLink: "https://djimenezdev.com",
+      companyLink: "https://www.djimenezdev.com",
       desc: "Also do freelancing work helping my clients build the dream site for their brand using the skills I have developed",
     },
 
@@ -94,13 +99,13 @@ const userData = {
     },
   ],
   resumeUrl:
-    "https://drive.google.com/file/d/1vEp4CPErkYB5e10RG-6FHHZDLXlkPXEZ/view?usp=sharing",
+    "https://drive.google.com/file/d/1LYxKphXuDiZFs5PxN5uOy6JLalq9EQQ8/view?usp=sharing",
   socialLinks: {
-    instagram: "https://instagram.com/djimenez0255",
-    twitter: "https://twitter.com/djimenez_0255",
+    instagram: "https://instagram.com/djimenezdev",
+    twitter: "https://twitter.com/djimenezdev",
     linkedin: "https://www.linkedin.com/in/daniel-jimenez-479b961a9/",
-    github: "https://github.com/danieljimenez0255",
-    facebook: "https://www.facebook.com/djimenez0255",
+    github: "https://github.com/djimenezdev",
+    facebook: "https://www.facebook.com/djimenezdev",
   },
   techStack: {
     javaScript:
@@ -114,7 +119,7 @@ const userData = {
       "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png",
     mongoDB:
       "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png",
-    nextJS: "/images/nextjs_logo.png",
+    nextJS: "/images/nextJS-logo.png",
     story: "/images/story-logo.png",
   },
 };
