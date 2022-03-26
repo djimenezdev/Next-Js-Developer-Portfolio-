@@ -24,7 +24,7 @@ library.add(
   faLinkedin,
   faGithub,
   faFacebook,
-  faCircle,
+  faCircle
   // faSquareFull,
   // faStop
 );
@@ -32,7 +32,7 @@ library.add(
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider
-      defaultTheme="light"
+      defaultTheme="dark"
       attribute="class"
       disableTransitionOnChange={false}
     >
