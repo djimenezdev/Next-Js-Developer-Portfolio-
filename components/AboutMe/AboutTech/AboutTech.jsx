@@ -14,7 +14,7 @@ const AboutTech = ({ user }) => {
       <div className="flex flex-row flex-wrap mt-8">
         {Object.values(user?.techStack).map((val, i) => (
           <div className={`mx-4 my-4 `} key={i}>
-            <Image src={val} width={80} height={80} />
+            <Image src={val} width={80} height={80} className="rounded-sm" />
           </div>
         ))}
       </div>
