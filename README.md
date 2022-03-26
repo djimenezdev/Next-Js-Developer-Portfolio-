@@ -14,7 +14,7 @@ This is a very special portfolio that I am super excited to share with you!
 
 # Here is a demo and a link to my version of this awesome template
 
-![My Portfolio Clone](./public/images/portfolio-demo.gif)
+![My Portfolio Clone](https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/portfolio-demo.gif?alt=media&token=af2599a2-bef9-4366-aed9-97538c4acff6)
 
 <a href="https://www.djimenezdev.com" style="display:block;background:#000;width:100%;padding-left:5px"><h2 >Click me to see the live site </h2></a>
 
@@ -28,7 +28,7 @@ This is a very special portfolio that I am super excited to share with you!
 
    - Once you are on the page click the green code button which is circled blue in the image below. It will show a list of options. Click the one that says download zip which is circled red in the picture below:
 
-![Portfolio Repo Screenshot](./public/images/readme-screenshot-one.jpg)
+![Portfolio Repo Screenshot](https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/readme-screenshot-one.jpg?alt=media&token=9d3e8fe0-6697-4c4b-bf37-e2919b806dbb)
 
 2. Make sure to have Node JS and VScode installed before unzipping.
 
@@ -42,15 +42,15 @@ This is a very special portfolio that I am super excited to share with you!
 3. Unzip and open in editor
    - Now that you have node js installed and your editor ready, go to your downloads and unzip. Then open it in your editor as seen below:
 
-![Opening Project in VSCode](./public/images/readme-screenshot-two.png)
+![Opening Project in VSCode](https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/readme-screenshot-two.png?alt=media&token=c8cc3e06-5ab2-44d8-aba6-6ae9cc730991)
 
 - Once you open the editor it is going to ask if you trust the author of the content. Click Yes and your editor should look similar to below:
 
-![Opening Project in VSCode Final](./public/images/readme-screenshot-three.png)
+![Opening Project in VSCode Final](https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/readme-screenshot-three.png?alt=media&token=308315d9-423a-4ea8-9d4c-58c90d5671a2)
 
 4. Delete yarn.lock file as we will be using npm to manage the project not yarn
 
-![Deleting yarn.lock](./public/images/readme-screenshot-four.png)
+![Deleting yarn.lock](https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/readme-screenshot-four.png?alt=media&token=a5360827-ba60-42fd-bb44-b885fbd19d5f)
 
 5. Open the terminal and install the dependencies
 
@@ -65,7 +65,7 @@ This is a very special portfolio that I am super excited to share with you!
 
    The steps described are shown below
 
-![Installing Dependencies](./public/images/readme-screenshot-five.gif)
+![Installing Dependencies](https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/readme-screenshot-five.gif?alt=media&token=f905657a-8610-4a1b-8f6c-4fadf4f70a7a)
 
 6. Run the project and begin making it your own!!
 
