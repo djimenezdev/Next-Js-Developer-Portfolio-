@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-const SmallCard = () => {
+const SmallCard = ({ title, imageUrl, liveLink }) => {
   return (
     <a
-      href="https://airbnb-clone-with-nextjs.vercel.app/"
+      href={liveLink}
       className="w-full block lg:col-span-1 col-span-3  object-cover"
     >
       <div className="relative overflow-hidden shadow-2xl rounded-md">
         <div className="image-container max-h-[405px]">
           <Image
-            src="/images/airbnb-clone.jpg"
-            alt="airbnb clone"
+            src={imageUrl}
+            alt={title}
             className="portfolio__image transform hover:scale-125 transition duration-2000 ease-out"
             layout="fill"
             quality={65}
@@ -19,7 +19,7 @@ const SmallCard = () => {
           />
         </div>
         <h1 className="absolute top-10 left-2 text-white font-bold text-base sm:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2">
-          Airbnb Clone
+          {title}
         </h1>
         <h1 className="absolute bottom-10 left-2 text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] font-bold text-xl rounded-md px-2">
           03

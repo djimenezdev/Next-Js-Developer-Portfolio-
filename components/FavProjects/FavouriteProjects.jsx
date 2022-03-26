@@ -2,6 +2,7 @@ import Link from "next/link";
 import LargeCard from "./LargeCard";
 import MediumCard from "./MediumCard";
 import SmallCard from "./SmallCard";
+import user from "@constants/data";
 
 export default function FavouriteProjects() {
   return (
@@ -36,11 +37,23 @@ export default function FavouriteProjects() {
         {/* Grid starts here */}
         <div className="grid grid-cols-3 gap-8 lg:-mt-8 pb-40 px-4">
           {/* Large card */}
-          <LargeCard />
+          <LargeCard
+            title={user?.projects[0].title}
+            imageUrl={user?.projects[0].imgUrl}
+            liveLink={user?.projects[0].link}
+          />
           {/* Medium card */}
-          <MediumCard />
+          <MediumCard
+            title={user?.projects[1].title}
+            imageUrl={user?.projects[1].imgUrl}
+            liveLink={user?.projects[1].link}
+          />
           {/* Small card */}
-          <SmallCard />
+          <SmallCard
+            title={user?.projects[4].title}
+            imageUrl={user?.projects[4].imgUrl}
+            liveLink={user?.projects[4].link}
+          />
         </div>
       </div>
     </div>
