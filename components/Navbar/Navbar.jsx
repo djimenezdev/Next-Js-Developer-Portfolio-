@@ -21,7 +21,7 @@ export default function Navbar() {
     window.addEventListener("resize", () => setScreen(window.innerWidth));
     return () =>
       window.removeEventListener("resize", () => setScreen(window.innerWidth));
-  }, [window]);
+  }, []);
 
   useEffect(() => {
     if (theme === "dark") {
