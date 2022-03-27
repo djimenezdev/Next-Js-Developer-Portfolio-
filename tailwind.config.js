@@ -14,6 +14,7 @@ module.exports = {
         "shadow-white": "0px 1px 3px -1px  #FFFFFF",
       },
       screens: {
+        xs: "425px",
         lgTwo: "1059px",
       },
       backgroundImage: {

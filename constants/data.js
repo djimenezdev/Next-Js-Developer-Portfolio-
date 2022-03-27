@@ -1,7 +1,7 @@
 const userData = {
   githubUsername: "djimenezdev",
   name: "Daniel Jimenez",
-  designation: "Full-Stack/Blockchain Developer",
+  designation: "Full-Stack/Blockchain Dev",
   avatarUrl: "/images/portfolio-img.jpg",
   email: "daniel@djimenezdev.com",
   phone: "+1 661-544-5098",

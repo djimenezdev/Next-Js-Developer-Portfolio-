@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import userData, { svgPaths } from "@constants/data";
 import { Switch } from "@headlessui/react";
 import NavLink from "./NavLink";
@@ -10,9 +10,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 export default function Navbar() {
-  const router = useRouter();
+  // const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [enabled, setEnabled] = useState(true);
+  const [screen, setScreen] = useState(null);
+
+  useEffect(() => {
+    if (!window) return;
+    setScreen(window.innerWidth);
+    window.addEventListener("resize", () => setScreen(window.innerWidth));
+    return () =>
+      window.removeEventListener("resize", () => setScreen(window.innerWidth));
+  }, [window]);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -56,11 +65,19 @@ export default function Navbar() {
               target="_blank"
               className="flex items-center"
             >
-              <div className="bg-white h-[29px] rounded-md">
+              <div
+                className={`bg-white  ${
+                  screen <= 327
+                    ? "h-[18px]"
+                    : screen <= 375
+                    ? "h-[21px]"
+                    : "xs:h-[29px]"
+                } rounded-md`}
+              >
                 <Image
                   src="/images/instagram-icon.png"
-                  width={30}
-                  height={30}
+                  width={screen < 425 ? 24 : 30}
+                  height={screen < 425 ? 24 : 30}
                   alt="instagram icon"
                 />
               </div>
@@ -72,11 +89,11 @@ export default function Navbar() {
             >
               <FontAwesomeIcon
                 icon={["fab", "twitter"]}
-                size="2x"
+                style={{ fontSize: screen < 425 ? "1.5em" : "2em" }}
                 className="text-[#1C99E6]  cursor-pointer"
               />
             </a>
-            <div className="h-[26px] w-[28px] bg-white flex justify-center items-center rounded-md cursor-pointer">
+            <div className="xs:h-[26px] xs:w-[28px] h-[20px] bg-white flex justify-center items-center rounded-md cursor-pointer">
               <a
                 href={userData?.socialLinks?.linkedin}
                 target="_blank"
@@ -84,7 +101,7 @@ export default function Navbar() {
               >
                 <FontAwesomeIcon
                   icon={["fab", "linkedin"]}
-                  size="2x"
+                  style={{ fontSize: screen < 425 ? "1.5em" : "2em" }}
                   className="text-[#0072B1]"
                 />
               </a>
