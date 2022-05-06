@@ -13,13 +13,17 @@ const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
   // added comment for preview to match to subdomain
   return (
     <div
-      className="w-full block lg:col-span-1 col-span-3  object-cover cursor-pointer"
+      className="w-full block lg:col-span-1 col-span-3  object-cover h-[162px] cursor-pointer"
       onMouseOver={() => setInfoDisplay(true)}
       onMouseLeave={() => setInfoDisplay(false)}
       onClick={() => router.push(`/projects/${route}`)}
     >
-      <div className="relative overflow-hidden shadow-2xl rounded-md">
-        <div className="image-container max-h-[405px]">
+      <div className="relative overflow-hidden shadow-2xl rounded-md h-[162px]">
+        <div
+          whileHover={{ backgroundColor: "#000" }}
+          transition={{ duration: 0.3 }}
+          className="image-container h-[162px]"
+        >
           <Image
             src={imageUrl}
             alt={title}
@@ -38,9 +42,9 @@ const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
         </h1>
         {infoDisplay && (
           <motion.div
-            className={`absolute flex justify-center items-center w-full h-full top-0 bg-transparent`}
-            whileHover={{ backgroundColor: "#000" }}
-            transition={{ duration: 0.3 }}
+            className={`absolute flex justify-center items-center w-full h-full top-0`}
+            whileHover={{ backgroundColor: infoDisplay && "#000" }}
+            transition={{ duration: infoDisplay && 0.3 }}
           >
             {" "}
             <motion.button
@@ -54,7 +58,7 @@ const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
                 damping: 30,
               }}
             >
-              <svg
+              <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="25"
@@ -80,7 +84,7 @@ const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
                   }}
                   d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
                 />
-              </svg>
+              </motion.svg>
               <p>Learn more</p>
             </motion.button>
           </motion.div>

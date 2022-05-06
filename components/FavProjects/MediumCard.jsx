@@ -39,9 +39,9 @@ const MediumCard = ({ title, imageUrl /* , liveLink */, route }) => {
         </h1>
         {infoDisplay && (
           <motion.div
-            className={`absolute flex justify-center items-center w-full h-full top-0 bg-transparent`}
-            whileHover={{ backgroundColor: "#000" }}
-            transition={{ duration: 0.3 }}
+            className={`absolute flex justify-center items-center w-full h-full top-0`}
+            whileHover={{ backgroundColor: infoDisplay && "#000" }}
+            transition={{ duration: infoDisplay && 0.3 }}
           >
             {" "}
             <motion.button
