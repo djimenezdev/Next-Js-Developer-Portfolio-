@@ -41,7 +41,7 @@ const LargeCard = ({ title, imageUrl, route /* , liveLink  */ }) => {
           <motion.div
             className={`absolute flex justify-center items-center w-full h-full top-0 bg-transparent`}
             whileHover={{ backgroundColor: "#000" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.3 }}
           >
             {" "}
             <motion.button
