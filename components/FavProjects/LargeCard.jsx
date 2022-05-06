@@ -14,12 +14,12 @@ const LargeCard = ({ title, imageUrl, route /* , liveLink  */ }) => {
   // added comment for preview to match to subdomain
   return (
     <div
-      className="w-full  col-span-3 shadow-2xl cursor-pointer"
+      className="w-full  col-span-3 shadow-2xl cursor-pointer "
       onMouseOver={() => setInfoDisplay(true)}
       onMouseLeave={() => setInfoDisplay(false)}
       onClick={() => router.push(`/projects/${route}`)}
     >
-      <div className="h-full relative overflow-hidden rounded-md">
+      <div className="h-full relative overflow-hidden rounded-md ">
         <div className="image-container max-h-[517px]">
           <Image
             src={imageUrl}
@@ -38,10 +38,8 @@ const LargeCard = ({ title, imageUrl, route /* , liveLink  */ }) => {
           01
         </h1>
         {infoDisplay && (
-          <motion.div
-            className={`absolute flex justify-center items-center w-full h-full top-0`}
-            whileHover={{ backgroundColor: infoDisplay && "#000" }}
-            transition={{ duration: infoDisplay && 0.3 }}
+          <div
+            className={`absolute flex justify-center items-center w-full h-full top-0 transition-colors duration-300 hover:bg-black`}
           >
             {" "}
             <motion.button
@@ -84,7 +82,7 @@ const LargeCard = ({ title, imageUrl, route /* , liveLink  */ }) => {
               </svg>
               <p>Learn more</p>
             </motion.button>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

@@ -38,10 +38,8 @@ const MediumCard = ({ title, imageUrl /* , liveLink */, route }) => {
           02
         </h1>
         {infoDisplay && (
-          <motion.div
-            className={`absolute flex justify-center items-center w-full h-full top-0`}
-            whileHover={{ backgroundColor: infoDisplay && "#000" }}
-            transition={{ duration: infoDisplay && 0.3 }}
+          <div
+            className={`absolute flex justify-center items-center w-full h-full top-0 transition-colors duration-300 hover:bg-black`}
           >
             {" "}
             <motion.button
@@ -84,7 +82,7 @@ const MediumCard = ({ title, imageUrl /* , liveLink */, route }) => {
               </svg>
               <p>Learn more</p>
             </motion.button>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>
