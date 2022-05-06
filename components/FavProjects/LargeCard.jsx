@@ -40,7 +40,7 @@ const LargeCard = ({ title, imageUrl, route /* , liveLink  */ }) => {
         {infoDisplay && (
           <motion.div
             className={`absolute flex justify-center items-center w-full h-full top-0 bg-transparent`}
-            whileHover={{ backgroundColor: "rgba(0,0,0,1)" }}
+            whileHover={{ background: "rgba(0,0,0,1)" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
             {" "}
