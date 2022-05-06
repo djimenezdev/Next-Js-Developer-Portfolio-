@@ -3,17 +3,17 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-const SmallCard = ({ title, imageUrl, /* liveLink  */ route }) => {
+const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
   const [infoDisplay, setInfoDisplay] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     router.prefetch(`/projects/${route}`);
   }, []);
-
+  // added comment for preview to match to subdomain
   return (
     <div
-      className="w-full  col-span-3 shadow-2xl cursor-pointer"
+      className="w-full block lg:col-span-1 col-span-3  object-cover cursor-pointer"
       onMouseOver={() => setInfoDisplay(true)}
       onMouseLeave={() => setInfoDisplay(false)}
       onClick={() => router.push(`/projects/${route}`)}
