@@ -40,19 +40,22 @@ export default function FavouriteProjects() {
           <LargeCard
             title={user?.projects[0].title}
             imageUrl={user?.projects[0].imgUrl}
-            liveLink={user?.projects[0].link}
+            // liveLink={user?.projects[0].link}
+            route={user?.projects[0].route}
           />
           {/* Medium card */}
           <MediumCard
             title={user?.projects[1].title}
             imageUrl={user?.projects[1].imgUrl}
-            liveLink={user?.projects[1].link}
+            route={user?.projects[1].route}
+            // liveLink={user?.projects[1].link}
           />
           {/* Small card */}
           <SmallCard
             title={user?.projects[4].title}
             imageUrl={user?.projects[4].imgUrl}
-            liveLink={user?.projects[4].link}
+            route={user?.projects[4].route}
+            // liveLink={user?.projects[4].link}
           />
         </div>
       </div>

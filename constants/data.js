@@ -8,60 +8,70 @@ const userData = {
   address: "Lancaster, California",
   projects: [
     {
-      title: "Opensea Market Clone",
-      link: "https://os-market-clone.vercel.app/",
-      imgUrl:
-        "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/opensea-img.png?alt=media&token=eb7ac955-19e6-4066-84a3-db240cf51350",
-    },
-    {
+      route: "djnft",
       title: "DJ NFT",
       link: "https://dj-nft-vite.netlify.app/",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/djnftvite.png?alt=media&token=e7b53287-d93c-4332-a61c-6783f2975fb3",
     },
     {
+      route: "osclone",
+      title: "Opensea Market Clone",
+      link: "https://os-market-clone.vercel.app/",
+      imgUrl:
+        "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/opensea-img.png?alt=media&token=eb7ac955-19e6-4066-84a3-db240cf51350",
+    },
+    {
+      route: "cbclone",
       title: "DJ Coinbase Clone",
       link: "https://dj-coinbase-clone.vercel.app/",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/Screenshot%202022-03-25%20214528.png?alt=media&token=bcfdcd6e-9f65-4e7d-83fa-0e1e0ea3293e",
     },
     {
+      route: "cryptotracker",
       title: "CryptoTracker",
       link: "https://expo.dev/@djimenez0255/CryptoApp",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/cryptoTracker-thumbnail.jpg?alt=media&token=108e9d32-2114-4179-8471-3c258962765b",
     },
     {
+      route: "mdshomes",
       title: "MDS Homes  Website",
       link: "https://www.marlontherealtor.com/",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/mds-website.png?alt=media&token=a1fcb5fd-32cf-4189-8b72-4ffba5093ecd",
     },
     {
+      route: "risingcrytals",
       title: "Rising Crytals",
       link: "https://www.lorinamarie.com",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/rising-crystals.png?alt=media&token=052589bc-be3d-4237-a874-551425f3397a",
     },
     {
+      route: "airbnbclone",
       title: "Airbnb Clone ",
       link: "https://airbnb-clone-with-nextjs.vercel.app/",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/airbnb-clone.jpg?alt=media&token=bfdd8c48-0fbe-4137-90aa-06e6a5edb0ec",
     },
     {
+      route: "uberclone",
       title: "Uber Clone",
       link: "https://expo.io/@djimenez0255/projects/uberClone",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/uber-clone.jpg?alt=media&token=26f25114-ace0-4a3a-8911-3da50cafb19b",
     },
     {
+      route: "amazonclone",
       title: "Amazon Clone",
       link: "https://clone-stripe.web.app/",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/amazon-clone.jpg?alt=media&token=c7a48761-fe3a-4ccb-adcd-0c438ddeda1f",
     },
     {
+      route: "netflixclone",
       title: "Netflix Clone",
       link: "https://netflix-challenge-clone.web.app/",
       imgUrl:
@@ -69,12 +79,14 @@ const userData = {
     },
 
     {
+      route: "signalclone",
       title: "Signal Clone",
       link: "https://expo.dev/@djimenez0255/signal-clone",
       imgUrl:
         "https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/Signal-Clone-Thumbnail.jpg?alt=media&token=93c90dac-63af-4f3a-bde0-afef81e51aa3",
     },
     {
+      route: "wpportfolio",
       title: "WP Portfolio",
       link: "https://portfolio.freelancerpro.org/",
       imgUrl:
