@@ -1,42 +1,53 @@
-import "@styles/globals.css";
-import { ThemeProvider } from "next-themes";
-import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
-import { config, library } from "@fortawesome/fontawesome-svg-core";
+import '@styles/globals.css';
+import { ThemeProvider } from 'next-themes';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
+import { config, library } from '@fortawesome/fontawesome-svg-core';
 import {
   faFacebook,
   faGithub,
-  // faInstagram,
-  // faInstagram,
-  // faInstagramSquare,
   faLinkedin,
   faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+  faSquareFontAwesome,
+  faElementor,
+  faMailchimp,
+  faGoogle,
+} from '@fortawesome/free-brands-svg-icons';
 import {
-  faCircle,
-  // faSquareFull,
-  // faStop,
-} from "@fortawesome/free-solid-svg-icons";
+  faChevronLeft,
+  faChevronRight,
+  faCircle as faCircleSolid,
+  faGlobe,
+} from '@fortawesome/free-solid-svg-icons';
+import { faCircle as faCircleOutline } from '@fortawesome/free-regular-svg-icons';
+import { Provider } from 'react-redux';
+import { store } from '@utils/store';
 config.autoAddCss = false;
 library.add(
-  // faInstagramSquare,
-  // faInstagram,
+  faChevronLeft,
+  faChevronRight,
+  faCircleSolid,
+  faCircleOutline,
+  faGlobe,
   faTwitter,
   faLinkedin,
   faGithub,
   faFacebook,
-  faCircle
-  // faSquareFull,
-  // faStop
+  faSquareFontAwesome,
+  faElementor,
+  faMailchimp,
+  faGoogle
 );
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider
-      defaultTheme="dark"
-      attribute="class"
+      defaultTheme='dark'
+      attribute='class'
       disableTransitionOnChange={false}
     >
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </ThemeProvider>
   );
 }
