@@ -8,8 +8,9 @@ export const randomizeProjects = (projects) => {
     const randomIndex = Math.floor(Math.random() * projectsCopy.length);
     const randomProject = projects[randomIndex];
     if (
-      randomProjects.some(({ title }) => title === projects[randomIndex]) !==
-      true
+      randomProjects.some(
+        ({ title }) => title === projects[randomIndex].title
+      ) !== true
     ) {
       randomProjects.push(randomProject);
     }
