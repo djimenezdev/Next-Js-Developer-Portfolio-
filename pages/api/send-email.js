@@ -1,8 +1,8 @@
-const sendGridMail = require("@sendgrid/mail");
+const sendGridMail = require('@sendgrid/mail');
 sendGridMail.setApiKey(process.env.EMAIL_PASS);
 
 export default async function handler(req, res) {
-  if (req.method === "POST") {
+  if (req.method === 'POST') {
     const { name, email, message } = req.body;
 
     await sendGridMail
@@ -18,27 +18,19 @@ export default async function handler(req, res) {
       })
       .then(
         async () => {
-          await sendGridMail
-            .send({
-              from: process.env.EMAIL_FROM,
-              to: email,
-              replyTo: process.env.EMAIL_TO,
-              templateId: process.env.EMAIL_ID,
-              dynamicTemplateData: {
-                name: name,
-              },
-            })
-            .then(
-              (response) => {
-                res.json({ res: "success" });
-              },
-              (error) => {
-                res.json({ res: "Not successful" });
-              }
-            );
+          await sendGridMail.send({
+            from: process.env.EMAIL_FROM,
+            to: email,
+            replyTo: process.env.EMAIL_TO,
+            templateId: process.env.EMAIL_ID,
+            dynamicTemplateData: {
+              name: name,
+            },
+          });
+          res.json({ res: 'success' });
         },
         (error) => {
-          res.json({ res: "Not successful" });
+          res.json({ res: 'Not successful' });
         }
       );
   }
