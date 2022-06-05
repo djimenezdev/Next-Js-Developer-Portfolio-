@@ -1,10 +1,12 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { shimmer, toBase64 } from '@constants/data';
 
-const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
+const SmallCard = ({ title, imageUrl /* , liveLink */, route, isOther }) => {
   const [infoDisplay, setInfoDisplay] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -13,74 +15,91 @@ const SmallCard = ({ title, imageUrl /* , liveLink */, route }) => {
   // added comment for preview to match to subdomain
   return (
     <div
-      className="w-full block lg:col-span-1 col-span-3  object-cover h-[162px] cursor-pointer"
+      className={`mt-2 w-full block lg:col-span-1 col-span-3  object-cover cursor-pointer ${
+        isOther
+          ? 'mr-3 w-[300px] h-[150px] xss:w-[340px] xss:h-[180px] sm:w-[605px] sm:h-[302px] md:h-[202px] md:w-[405px] '
+          : ' h-[160px] xs:h-[200px] sm:h-[340px] md:h-[400px] lg:h-[182px]'
+      }`}
       onMouseOver={() => setInfoDisplay(true)}
       onMouseLeave={() => setInfoDisplay(false)}
-      onClick={() => router.push(`/projects/${route}`)}
     >
-      <div className="relative overflow-hidden shadow-2xl rounded-md h-[162px]">
+      <div
+        className={`relative overflow-hidden shadow-2xl rounded-md  w-full ${
+          isOther
+            ? 'md:h-[202px] sm:h-[302px] xss:h-[180px] h-[150px]'
+            : ' h-[160px] xs:h-[200px] sm:h-[340px] md:h-[400px] lg:h-[182px]'
+        }`}
+      >
         <div
-          whileHover={{ backgroundColor: "#000" }}
-          transition={{ duration: 0.3 }}
-          className="image-container h-[162px]"
+          className={`image-container w-full ${
+            isOther
+              ? 'md:h-[202px] sm:h-[302px] xss:h-[180px] h-[150px]'
+              : ' h-[160px] xs:h-[200px] sm:h-[340px] md:h-[400px] lg:h-[182px]'
+          }`}
         >
           <Image
-            src={imageUrl}
+            src={imageUrl[0]}
             alt={title}
-            className="portfolio__image transform hover:scale-125 transition duration-2000 ease-out"
-            layout="fill"
+            className='transform hover:scale-125 transition duration-2000 ease-out'
+            layout='fill'
             quality={65}
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAaCAIAAAB6opi9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEySURBVFhH1VdLFsIgDAzeyrN7MjfFSaC0lJLqwMLOw8cnH4ZMFjU8X2+JEmOURYCw2DpKGiGGtMW5nQRZMK0LLC0K25DP84gp2+oAK9JYlG7hoKZk1UW+HbPmifIwrz9AyHNCnxYe0Ud6quvCoHDr06rpn0JdztzG6fIi9miTnOowkpZTSpgcaxcWU7iRtBCfxuGVs0C2/HzU1/Etn8ViBOuiJONbfjLq55EiTq3RhnInKSLi0/DZf4k2x9+IWFPjaaGaWtCmqLmKY7hdy7twG+9ntNlIWptM44IdAI7hfi3vlmEreyOAvZaEBuJe7+vUze1LRwtbAueLSHPaY5jWFBYrVCFrgvnVohtrD5JWedYpC5qZlh4/r+VddTQW/+csRQU3StGjbOfFOF/Ea2aXEPkAw5No5T4ThIoAAAAASUVORK5CYII="
+            placeholder='blur'
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(700, 475)
+            )}`}
+            onLoadingComplete={() => setImageLoaded(true)}
           />
         </div>
-        <h1 className="absolute top-10 left-2 text-white font-bold text-base sm:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2">
+        <h1 className='absolute top-10 left-2 text-white font-bold text-base sm:text-xl bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md px-2'>
           {title}
         </h1>
-        <h1 className="absolute bottom-10 left-2 text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] font-bold text-xl rounded-md px-2">
-          03
-        </h1>
-        {infoDisplay && (
+        {!isOther && (
+          <h1 className='absolute bottom-10 left-2 text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] font-bold text-xl rounded-md px-2'>
+            03
+          </h1>
+        )}
+        {infoDisplay && imageLoaded && (
           <div
             className={`absolute flex justify-center items-center w-full h-full top-0  transition-colors duration-300 hover:bg-black`}
+            onClick={() => router.push(`/projects/${route}`)}
           >
-            {" "}
+            {' '}
             <motion.button
-              className="flex space-x-5 px-8 py-4 rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] shadow-lg text-xl font-semibold  items-center text-white"
-              type="button"
+              className='flex space-x-5 px-8 py-4 rounded-md bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] shadow-lg text-xl font-semibold  items-center text-white'
+              type='button'
               initial={{ scale: 0 }}
               animate={{ rotate: 360, scale: 1 }}
               transition={{
-                type: "spring",
+                type: 'spring',
                 stiffness: 100,
                 damping: 30,
               }}
             >
               <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                className="bi bi-arrow-up-right-square"
-                stroke="6"
-                strokeWidth="6"
-                viewBox="0 0 16 16"
+                xmlns='http://www.w3.org/2000/svg'
+                width='25'
+                height='25'
+                className='bi bi-arrow-up-right-square'
+                stroke='6'
+                strokeWidth='6'
+                viewBox='0 0 16 16'
               >
                 <motion.path
-                  fillRule="evenodd"
-                  initial="hidden"
-                  animate="visible"
+                  fillRule='evenodd'
+                  initial='hidden'
+                  animate='visible'
                   transition={{ delay: 1, duration: 0.2 }}
                   variants={{
                     hidden: {
                       pathLength: 0,
-                      fill: "rgba(255, 255, 255, 0)",
+                      fill: 'rgba(255, 255, 255, 0)',
                     },
                     visible: {
                       pathLength: 1,
-                      fill: "rgba(255, 255, 255, 1)",
+                      fill: 'rgba(255, 255, 255, 1)',
                     },
                   }}
-                  d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
+                  d='M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z'
                 />
               </motion.svg>
               <p>Learn more</p>
