@@ -406,7 +406,7 @@ const userData = {
       'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png',
     expo: 'https://avatars.githubusercontent.com/u/12504344?s=200&v=4',
     reactNavigation:
-      'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/react-navigation.svg?alt=media&token=46351a3b-71bc-4418-8c78-944617758169',
+      'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/react-navigation.png?alt=media&token=bce20e8a-64fb-4d71-9b3c-1028dd59b6b6',
     reactRouter:
       'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/react-router.png?alt=media&token=ce9a7665-4994-4deb-99c1-cc16ad3e9b0f',
     formik:
