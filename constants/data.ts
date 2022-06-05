@@ -15,8 +15,8 @@ const userData = {
       repo: 'https://github.com/djimenezdev/djbuildspace-ethcontract-ui',
       accomplishments: [
         "Implemented Friendly UI that let's users send a friendly wave on the Rinkeby Testnet",
-        'Utilized hardhat to properly develop, debug, test & deploy to the chain',
-        'Optimized to load in under a second for great experience',
+        'Utilized hardhat to properly develop, debug, test & deploy Smart Contract to the chain',
+        'Optimized to load in under a second for a great experience',
         'Developed with React and craco to develop fast and friendly user experience',
       ],
       technologies: [
