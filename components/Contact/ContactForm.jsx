@@ -1,10 +1,5 @@
 import React, { useRef, useState } from 'react';
-import {
-  buttonClasses,
-  formValidation,
-  sendMessage,
-  submitValidations,
-} from '@utils/contact';
+import { formValidation, sendMessage, submitValidations } from '@utils/contact';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Formik, Form, Field } from 'formik';
 
@@ -123,12 +118,19 @@ export const ContactForm = () => {
 
           <button
             type='submit'
-            className={buttonClasses(
-              isSubmitting,
-              errors,
-              values,
-              recaptchaVal
-            )}
+            className={`
+            ${
+              errors.name ||
+              errors.email ||
+              errors.message ||
+              values.name.length === 0 ||
+              values.email.length === 0 ||
+              values.message.length === 0 ||
+              isSubmitting ||
+              recaptchaVal === 'not verified'
+                ? 'opacity-75 cursor-default'
+                : 'opacity-100 cursor-pointer'
+            } self-center py-3 bg-blue-500 rounded-md w-1/2 mx-4 mt-8  text-gray-50 text-sm font-bold`}
             disabled={submitValidations(
               errors,
               values,

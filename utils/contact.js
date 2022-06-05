@@ -19,22 +19,6 @@ export const submitValidations = (
   );
 };
 
-export const buttonClasses = (isSubmitting, errors, values, recaptchaVal) => {
-  return `
-  ${
-    errors.name ||
-    errors.email ||
-    errors.message ||
-    values.name.length === 0 ||
-    values.email.length === 0 ||
-    values.message.length === 0 ||
-    isSubmitting ||
-    recaptchaVal === 'not verified'
-      ? 'opacity-75 cursor-default'
-      : 'opacity-100 cursor-pointer'
-  } self-center py-3 bg-blue-500 rounded-md w-1/2 mx-4 mt-8  text-gray-50 text-sm font-bold`;
-};
-
 export const formValidation = Yup.object().shape({
   name: Yup.string().required('Make sure to input your name!'),
   email: Yup.string()
