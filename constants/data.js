@@ -122,7 +122,7 @@ const userData = {
         'Took advantage of react-navigation to implement multiple screens',
         'Used core features of Expo to bring the functionalities of the app all together',
       ],
-      technologies: ['react', 'expo', 'redux', 'firebase', 'react-navigation'],
+      technologies: ['react', 'expo', 'redux', 'firebase', 'reactNavigation'],
       type: 'mobile',
       imgUrl: [
         'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/cryptoTracker-thumbnail.jpg?alt=media&token=108e9d32-2114-4179-8471-3c258962765b',
