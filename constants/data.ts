@@ -371,7 +371,7 @@ const userData = {
     },
   ],
   resumeUrl:
-    'https://drive.google.com/file/d/1XC1-Y_7lwSRFJ3mQd_jUWZdP0mgUnknF/view',
+    'https://drive.google.com/file/d/1vEp4CPErkYB5e10RG-6FHHZDLXlkPXEZ/view?usp=sharing',
   socialLinks: {
     instagram: 'https://instagram.com/djimenezdev',
     twitter: 'https://twitter.com/djimenezdev',
