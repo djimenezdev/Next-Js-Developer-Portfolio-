@@ -30,8 +30,8 @@ export const buttonClasses = (isSubmitting, errors, values, recaptchaVal) => {
     values.message.length === 0 ||
     isSubmitting ||
     recaptchaVal === 'not verified'
-      ? ' opacity-75 cursor-default '
-      : ' opacity-100 cursor-pointer '
+      ? 'opacity-75 cursor-default'
+      : 'opacity-100 cursor-pointer'
   } self-center py-3 bg-blue-500 rounded-md w-1/2 mx-4 mt-8  text-gray-50 text-sm font-bold`;
 };
 
