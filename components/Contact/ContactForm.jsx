@@ -123,10 +123,12 @@ export const ContactForm = () => {
 
           <button
             type='submit'
-            className={
-              buttonClasses(isSubmitting, errors, values, recaptchaVal) +
-              ' self-center'
-            }
+            className={buttonClasses(
+              isSubmitting,
+              errors,
+              values,
+              recaptchaVal
+            )}
             disabled={submitValidations(
               errors,
               values,

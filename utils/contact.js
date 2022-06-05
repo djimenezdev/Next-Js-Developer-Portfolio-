@@ -20,7 +20,8 @@ export const submitValidations = (
 };
 
 export const buttonClasses = (isSubmitting, errors, values, recaptchaVal) => {
-  return `${
+  return `
+  ${
     errors.name ||
     errors.email ||
     errors.message ||
@@ -29,9 +30,9 @@ export const buttonClasses = (isSubmitting, errors, values, recaptchaVal) => {
     values.message.length === 0 ||
     isSubmitting ||
     recaptchaVal === 'not verified'
-      ? 'opacity-75 cursor-default'
-      : 'opacity-100 cursor-pointer'
-  } bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-3 text-gray-50 text-sm font-bold`;
+      ? ' opacity-75 cursor-default '
+      : ' opacity-100 cursor-pointer '
+  } self-center py-3 bg-blue-500 rounded-md w-1/2 mx-4 mt-8  text-gray-50 text-sm font-bold`;
 };
 
 export const formValidation = Yup.object().shape({
