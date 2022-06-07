@@ -20,6 +20,7 @@ const userData = {
         'Developed with React and craco to develop fast and friendly user experience',
       ],
       technologies: [
+        'metamask',
         'hardhat',
         'solidity',
         'react',
@@ -56,6 +57,7 @@ const userData = {
         'react',
         'moralis',
         'oz',
+        'metamask',
         'hardhat',
         'solidity',
         'remix',
@@ -79,7 +81,14 @@ const userData = {
         'Configured Marketplace Ethers JS to interact with 3rdweb project Smart Contract',
         'Introduced Sanity.io for powerful, fast and easy to use DB for DAPP Info',
       ],
-      technologies: ['react', 'sanityio', 'thirdweb', 'tailwind', 'ethers'],
+      technologies: [
+        'react',
+        'sanityio',
+        'thirdweb',
+        'tailwind',
+        'ethers',
+        'metamask',
+      ],
       type: 'web',
       imgUrl: [
         'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/osClone_home.png?alt=media&token=8dcfd8a4-e44d-4aa7-9c5e-7633d731aabe',
@@ -101,7 +110,7 @@ const userData = {
         'Used styled components to easily style application sticking to component workflow',
         'Implemented chartjs to add powerful visualizations regarding tokens/wallet balance',
       ],
-      technologies: ['nextJS', 'thirdweb', 'sanityio', 'ethers'],
+      technologies: ['nextJS', 'thirdweb', 'metamask', 'sanityio', 'ethers'],
       type: 'web',
       imgUrl: [
         'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/cbClone_home.png?alt=media&token=ad50fe96-7612-4cc1-996b-5d19dbd95da4',
@@ -380,6 +389,8 @@ const userData = {
     facebook: 'https://www.facebook.com/djimenezdev',
   },
   techStack: {
+    metamask:
+      'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/metamask-fox.png?alt=media&token=4a7ce605-701a-4757-9cc9-f966d645e312',
     hardhat:
       'https://firebasestorage.googleapis.com/v0/b/djimenezdev-portfolio-backend.appspot.com/o/hardhat-logo.5c5f687b.png?alt=media&token=42b5c679-2a18-43f8-8292-1c7082f4578a',
     thirdweb: 'https://avatars.githubusercontent.com/u/79496167?s=200&v=4',
