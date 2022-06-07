@@ -97,7 +97,7 @@ export default function ContainerBlock({
                 }}
               />
               <motion.div
-                layoutId='loadingCircle'
+                layoutId='loadingCircleTwo'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -118,7 +118,7 @@ export default function ContainerBlock({
                 }}
               />
               <motion.div
-                layoutId='loadingCircle'
+                layoutId='loadingCircleThree'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
