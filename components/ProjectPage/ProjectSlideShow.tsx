@@ -29,21 +29,15 @@ export const ProjectSlideShow = ({
   imageIndex,
 }: IProjectSlideShow) => {
   const [arrows, setArrows] = useState<boolean>(false);
-  const [ani, setAni] = useState<boolean>(false);
 
   const arrowsTimer = (action: string) => {
     let timeout: any;
     if (action === 'reset') {
-      setAni(false);
-      timeout = setTimeout(() => {
-        setArrows(false);
-        clearTimeout(timeout);
-      }, 400);
+      setArrows(false);
     } else {
       // clears timeout if they hover over before timeout executes to reduce render issues
       clearTimeout(timeout);
       setArrows(true);
-      setAni(true);
     }
   };
 
@@ -59,7 +53,7 @@ export const ProjectSlideShow = ({
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          className='absolute rounded-md mb-4 image_sty'
+          className='absolute rounded-md mb-4 image_sty cursor-pointer'
           key={page}
           src={images[imageIndex]}
           custom={direction}
@@ -85,30 +79,30 @@ export const ProjectSlideShow = ({
           }}
         />
       </AnimatePresence>
-      {arrows && (
-        <>
-          <motion.div
-            initial='hidden'
-            animate={ani ? 'visible' : 'hidden'}
-            variants={divVariant}
-            transition={{ duration: 0.4 }}
-            className='next absolute right-[4px] text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-[30px] w-[40px] h-[40px] flex justify-center items-center select-none cursor-pointer font-bold text-lg z-[2]'
-            onClick={() => paginate(1)}
-          >
-            <FontAwesomeIcon icon='chevron-right' />
-          </motion.div>
-          <motion.div
-            initial='hidden'
-            animate={ani ? 'visible' : 'hidden'}
-            variants={divVariant}
-            transition={{ duration: 0.4 }}
-            className='prev absolute left-[4px] text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-[30px] w-[40px] h-[40px] flex justify-center items-center select-none cursor-pointer font-bold text-lg z-[2]'
-            onClick={() => paginate(-1)}
-          >
-            <FontAwesomeIcon icon='chevron-left' />
-          </motion.div>
-        </>
-      )}
+
+      <>
+        <motion.div
+          initial='hidden'
+          animate={arrows ? 'visible' : 'hidden'}
+          variants={divVariant}
+          transition={{ duration: 0.4 }}
+          className='next absolute right-[4px] text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-[30px] w-[40px] h-[40px] flex justify-center items-center select-none cursor-pointer font-bold text-lg z-[2]'
+          onClick={() => paginate(1)}
+        >
+          <FontAwesomeIcon icon='chevron-right' />
+        </motion.div>
+        <motion.div
+          initial='hidden'
+          animate={arrows ? 'visible' : 'hidden'}
+          variants={divVariant}
+          transition={{ duration: 0.4 }}
+          className='prev absolute left-[4px] text-white bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-[30px] w-[40px] h-[40px] flex justify-center items-center select-none cursor-pointer font-bold text-lg z-[2]'
+          onClick={() => paginate(-1)}
+        >
+          <FontAwesomeIcon icon='chevron-left' />
+        </motion.div>
+      </>
+
       <ProjectSlideDots
         images={images}
         divVariant={divVariant}
