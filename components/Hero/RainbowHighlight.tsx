@@ -10,15 +10,13 @@ export const RainbowHighlight = ({
   children: React.ReactNode;
   textLength: number;
 }) => {
-  const animationDuration = Math.floor(30 * textLength);
-
   return (
     <RoughNotation
       type='highlight'
       multiline={true}
       padding={[0, 2]}
       iterations={1}
-      animationDuration={animationDuration}
+      animationDuration={800}
       color={color}
     >
       {children}
