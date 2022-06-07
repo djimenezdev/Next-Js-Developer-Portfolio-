@@ -42,7 +42,7 @@ export const GithubRepoCard = ({
       >
         <p className='flex items-center'>
           <FontAwesomeIcon
-            icon='github'
+            icon={['fab', 'github']}
             className='dark:text-white mr-3'
             size='2x'
           />
