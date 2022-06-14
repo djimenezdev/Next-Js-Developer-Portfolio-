@@ -1,4 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { formValidation, sendMessage, submitValidations } from '@utils/contact';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Formik, Form, Field } from 'formik';
@@ -9,7 +16,6 @@ export const ContactForm = () => {
   const [confirmMessage, setConfirmMessage] = useState<string>('');
   const [recaptchaVal, setRecaptchaVal] = useState<string>('not verified');
   const ref = useRef<HTMLElement>(null);
-
   return (
     <Formik
       onSubmit={(values, formikBag) =>
@@ -30,7 +36,7 @@ export const ContactForm = () => {
       validationSchema={formValidation}
     >
       {({ values, errors, touched, isSubmitting }) => (
-        <Form className='form rounded-lg bg-white p-4 flex flex-col'>
+        <Form className='form rounded-lg bg-white py-4 flex flex-col'>
           <label htmlFor='name' className='text-sm text-gray-600 mx-4'>
             {' '}
             Your Name
@@ -84,10 +90,9 @@ export const ContactForm = () => {
               {errors.message}
             </p>
           )}
-
           <ReCAPTCHA
             ref={ref}
-            className='self-center mt-3'
+            className='self-center  ml-[70px] xss:ml-[15px] xs:ml-0 mt-3 scale-[0.77] xss:scale-[0.95] origin-[0] xs:scale-[1]'
             sitekey='6Le9JUYgAAAAALYbqc4CA2xjD6UACIBXwcyhOQGm'
             onChange={(value) => setRecaptchaVal(value)}
             theme='dark'

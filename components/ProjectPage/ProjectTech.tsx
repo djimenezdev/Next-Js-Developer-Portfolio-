@@ -13,7 +13,10 @@ export const ProjectTech = ({ tech }: { tech: string[] }) => {
       <section className='flex flex-row flex-wrap mt-2 w-full justify-center'>
         {getTech.map((technology, i) =>
           technology.startsWith('https') ? (
-            <div className={`mx-4 my-4 `} key={i}>
+            <div
+              className={`flex justify-center items-center mx-2 xss:mx-4 my-4`}
+              key={i}
+            >
               <Image
                 src={technology}
                 width={80}
@@ -22,10 +25,13 @@ export const ProjectTech = ({ tech }: { tech: string[] }) => {
               />
             </div>
           ) : (
-            <div className={`mx-4 my-2`} key={i}>
+            <div
+              className={`flex justify-center items-center mx-2 xss:mx-4 my-4`}
+              key={i}
+            >
               <FontAwesomeIcon
                 icon={technology}
-                size='6x'
+                size='5x'
                 color={
                   iconColors[
                     Object.keys(userData?.techStack).filter(

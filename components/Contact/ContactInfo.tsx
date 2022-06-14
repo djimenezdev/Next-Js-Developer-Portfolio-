@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ContactInfo = ({ userData }) => {
   return (
-    <div className='icons-container inline-flex flex-col my-20'>
+    <div className='icons-container inline-flex flex-col md:my-20 self-center md:self-start'>
       <div className='flex flex-row items-center space-x-6 rounded-md cursor-pointer p-4'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

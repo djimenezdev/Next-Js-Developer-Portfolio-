@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ContactSocials = ({ userData }) => {
   return (
-    <div className='social-icons flex flex-row space-x-8'>
+    <div className='social-icons flex flex-row space-x-8 self-center md:self-start'>
       <a
         href={userData.socialLinks.facebook}
         className='h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer'
