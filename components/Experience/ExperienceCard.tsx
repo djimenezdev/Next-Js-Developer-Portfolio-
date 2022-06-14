@@ -20,8 +20,8 @@ export const ExperienceCard = ({
       <h1 className='absolute -top-10 md:-left-10 md:-top-10 text-4xl text-black font-bold dark:text-white'>
         {year}
       </h1>
-      <header className='w-full flex justify-between items-center'>
-        <div>
+      <header className='w-full flex-col-reverse xs:flex-row items-center flex  xs:justify-between '>
+        <div className='flex my-4 xs:my-0 xs:flex-row flex-col items-center xs:block'>
           <h1 className='font-semibold text-xl'>{title}</h1>
           <div
             className='relative z-20'
