@@ -14,10 +14,10 @@ const AboutTech = ({
         </p>
       ))}
 
-      <h1 className='bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md text-3xl  px-2 py-1 inline-block font-bold text-gray-50'>
+      <h1 className='bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-md text-3xl  px-2 py-1 md:inline-block font-bold text-gray-50'>
         Tech Stack
       </h1>
-      <div className='flex flex-row flex-wrap mt-8'>
+      <div className='flex flex-row flex-wrap mt-8 md:justify-center'>
         {Object.values(user?.techStack).map((val: string, i) =>
           val.startsWith('https') ? (
             <div className={`mx-4 my-4 `} key={i}>
