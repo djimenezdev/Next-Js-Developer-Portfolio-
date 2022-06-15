@@ -8,8 +8,8 @@ import { ContactForm } from './ContactForm';
 export default function Contact() {
   return (
     <section className='px-4'>
-      <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased'>
-        <h1 className=' text-5xl md:text-9xl font-bold py-20 text-center md:text-left'>
+      <div className='max-w-6xl mx-auto mb-8 bg-white dark:bg-gray-800 antialiased'>
+        <h1 className=' text-5xl md:text-9xl font-bold  text-center md:text-left'>
           Contact
         </h1>
       </div>
