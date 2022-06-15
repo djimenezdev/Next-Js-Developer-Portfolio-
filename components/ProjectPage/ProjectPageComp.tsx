@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ProjectSlideShow } from './ProjectSlideShow';
 import ProjectMobile from './ProjectMobile';
 import { ProjectAccomplishments } from './ProjectAccomplishments';
@@ -27,11 +27,17 @@ const ProjectPageComp = ({
   projectInfo: IProject;
   otherProjects: IProject[];
 }) => {
+  const [randomPro, setRandomPro] = useState([]);
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
   const imageIndex = wrap(0, imgUrl.length, page);
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
+
+  useEffect(() => {
+    setRandomPro(randomizeProjects(otherProjects));
+  }, []);
+
   return (
     <div className='max-w-7xl mx-auto px-2'>
       <section className='relative flex flex-col-reverse items-center xl:flex-row border-dashed border-b-2 border-[#399AF6] pb-7'>
@@ -60,7 +66,7 @@ const ProjectPageComp = ({
         <ProjectTech tech={technologies} />
       </section>
       <aside className='my-4 flex flex-col items-center w-full'>
-        <OtherProjects projects={randomizeProjects(otherProjects)} />
+        <OtherProjects projects={randomPro} />
         <ProjectsButton />
       </aside>
     </div>
