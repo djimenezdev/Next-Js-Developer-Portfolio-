@@ -10,6 +10,9 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ProjectSlideDots } from './ProjectSlideDots';
 import { IVariant } from '@utils/types';
+import Image from 'next/image';
+import { toBase64 } from '@constants/data';
+import { shimmer } from '@components/Shimmer';
 
 export type IProjectSlideShow = {
   images: string[];
@@ -52,10 +55,9 @@ export const ProjectSlideShow = ({
       onMouseLeave={() => arrowsTimer('reset')}
     >
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          className='absolute rounded-md mb-4 image_sty cursor-pointer'
+        <motion.div
+          className='absolute rounded-md mb-4 image_sty cursor-pointer w-full h-full'
           key={page}
-          src={images[imageIndex]}
           custom={direction}
           variants={variants}
           initial='enter'
@@ -77,7 +79,17 @@ export const ProjectSlideShow = ({
               paginate(-1);
             }
           }}
-        />
+        >
+          <Image
+            src={images[imageIndex]}
+            layout='fill'
+            alt='slide'
+            placeholder='blur'
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(700, 475)
+            )}`}
+          />
+        </motion.div>
       </AnimatePresence>
 
       <>
