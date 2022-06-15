@@ -77,7 +77,6 @@ export default function ContainerBlock({
             <h2 className='text-4xl ml-2'>Loading</h2>
             <AnimatePresence>
               <motion.div
-                layoutId='loadingCircle'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -97,7 +96,6 @@ export default function ContainerBlock({
                 }}
               />
               <motion.div
-                layoutId='loadingCircleTwo'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -118,7 +116,6 @@ export default function ContainerBlock({
                 }}
               />
               <motion.div
-                layoutId='loadingCircleThree'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
