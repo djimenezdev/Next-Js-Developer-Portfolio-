@@ -136,7 +136,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* light/dark mode toggler  */}
-          <div className='relative flex justify-end sm:inline-block z-0'>
+          <div className='relative flex justify-end sm:inline-block z-0 mt-2'>
             <Switch
               checked={enabled}
               onChange={() => {
