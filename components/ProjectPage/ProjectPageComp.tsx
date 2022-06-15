@@ -61,7 +61,7 @@ const ProjectPageComp = ({
         )}
         <ProjectInfo title={title} desc={desc} link={link} repo={repo} />
       </section>
-      <section className='flex flex-col items-center xl:flex-row mt-4 border-dashed border-b-2 border-[#399AF6]'>
+      <section className='flex flex-col  xl:flex-row mt-4 border-dashed border-b-2 border-[#399AF6]'>
         <ProjectAccomplishments accomplishments={accomplishments} />
         <ProjectTech tech={technologies} />
       </section>
