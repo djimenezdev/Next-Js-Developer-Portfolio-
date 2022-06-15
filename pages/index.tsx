@@ -5,6 +5,7 @@ import Hero from '@components/Hero/Hero';
 import getLatestRepos from '@lib/getLatestRepos';
 import userData from '@constants/data';
 import { GetServerSideProps } from 'next';
+import HeroMobile from '@components/Hero/HeroMobile';
 
 export default function Home({ repositories }) {
   return (
@@ -16,6 +17,7 @@ export default function Home({ repositories }) {
       date={new Date()}
     >
       <>
+        <HeroMobile />
         <Hero />
         <FavoriteProjects />
         <LatestCode repositories={repositories} />
