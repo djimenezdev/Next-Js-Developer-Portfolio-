@@ -83,6 +83,7 @@ export const ProjectSlideShow = ({
           <Image
             src={images[imageIndex]}
             layout='fill'
+            className='object-contain'
             alt='slide'
             placeholder='blur'
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
